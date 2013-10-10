@@ -62,7 +62,7 @@
 		
 		_batchTimer = [NSTimer timerWithTimeInterval:self.batchInterval target:self selector:@selector(sendBatchMessage) userInfo:nil repeats:YES];
 		
-		NSAssert([NSThread isMainThread], @"DMBatchNotificationManager can only be used on the main thread.");
+		NSAssert([NSThread isMainThread], @"DMBatchNotificationManager can only be instantiated on the main thread.");
 		[[NSRunLoop currentRunLoop] addTimer:self.batchTimer forMode:NSRunLoopCommonModes];
 		
 		
